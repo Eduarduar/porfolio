@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import ButtonDarkMode from '@/components/ButtonDarkMode'
-import { useTranslation } from 'react-i18next'
+import { userInfo } from '@/stores/userInfo'
 
 const Header: React.FC = () => {
-  const { t } = useTranslation()
   const [scrollState, setScrollState] = useState(false)
   const [firstScroll, setFirstScroll] = useState(true)
 
@@ -44,13 +43,13 @@ const Header: React.FC = () => {
           >
             <span className="box-border block overflow-hidden w-auto h-auto bg-none opacity-100 border-0 m-0 p-0 absolute inset-0">
               <img
-                src={t('userInfo.image')}
+                src={userInfo.image}
                 alt="user image"
                 className="absolute inset-0 box-border p-0 border-none m-auto block w-0 h-0 min-h-full min-w-full max-h-full max-w-full object-cover rounded-full drop-shadow-2xl"
               />
             </span>
             <span className="ml-14 font-semibold text-lg whitespace-nowrap text-slate-600 dark:text-slate-300">
-              {t('userInfo.firstName')} {t('userInfo.lastName')}
+              {userInfo.name}
             </span>
           </div>
           <ButtonDarkMode />
