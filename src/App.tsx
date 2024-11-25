@@ -1,11 +1,21 @@
-// import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react'
 import '@/assets/css/tailwind.css'
 import '@/assets/css/custom.css'
 import AppRoutes from '@/router/routes'
 import { DarkModeProvider } from '@/providers/DarkModeProvider'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function App() {
-  // const { t } = useTranslation();
+  useEffect(() => {
+    if (window.innerWidth > 768) {
+      AOS.init({
+        duration: 1000, // Duración de las animaciones en milisegundos
+        easing: 'ease-in-out' // Efecto de la animación
+        // once: true // Si la animación debe ejecutarse solo una vez
+      })
+    }
+  }, [])
 
   return (
     <>

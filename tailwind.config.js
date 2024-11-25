@@ -24,9 +24,15 @@ module.exports = {
         'menu-icon-in': 'menuIconIn 0.3s ease-out forwards',
         'menu-icon-out': 'menuIconOut 0.3s ease-in forwards',
         'provider-out': 'providerOut 1s forwards',
-        'neon-flicker': 'neonFlicker 12s infinite'
+        'neon-flicker': 'neonFlicker 12s infinite',
+        wave: 'wave 1.5s infinite'
       },
       keyframes: {
+        wave: {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '20%, 60%': { transform: 'rotate(-25deg)' },
+          '40%, 80%': { transform: 'rotate(10deg)' }
+        },
         providerOut: {
           '0%': { opacity: '1' },
           '99%': { opacity: '0' },
