@@ -1,0 +1,14 @@
+{
+    "userInfo": {
+        "firstName": "Eduarduar",
+        "lastName": "AR",
+        "workStatus": true,
+        "birthDate": "2005-09-18",
+        "email": "3duarduar@gmail.com",
+        "image": "https://github.com/eduarduar.png",
+        "cv": "https://google.com"
+    },
+    "hero": {
+        "description": "Soy un estudiante de ingeniería de software con experiencia en desarrollo web."
+    }
+}

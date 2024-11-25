@@ -1,0 +1,76 @@
+/* ? ########### Custom Scrollbar ########### ? */
+.scrollbar-custom::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 10px; /* Ajusta el ancho del scrollbar */
+  background-color: var(--scrollbar-bg); /* Color variable */
+}
+.scrollbar-custom::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb); /* Color variable */
+  border-radius: 5px; /* Ajusta el radio de las esquinas */
+}
+
+.dark .scrollbar-custom::-webkit-scrollbar {
+  /* slate-900 */
+  background-color: rgb(40, 51, 78); /* Color variable */
+}
+
+.dark .scrollbar-custom::-webkit-scrollbar-thumb {
+  /* slate-700 */
+  background: rgb(27, 37, 59); /* Color variable */
+}
+
+/* ?  ############## NProgress ############## ? */
+
+#nprogress .bar {
+  background: var(--nprogress-bar-bg); /* Color variable */
+  height: 8px; /* Ajusta el grosor de la barra */
+}
+
+/* Personaliza el spinner si lo usas */
+#nprogress .spinner-icon {
+  border-top-color: var(--nprogress-spinner); /* Color variable */
+  border-left-color: var(--nprogress-spinner); /* Color variable */
+}
+
+/* Cambia la posición de la barra si es necesario */
+#nprogress .bar {
+  top: 0; /* Coloca la barra en la parte superior */
+  left: 0;
+}
+
+/* Cambiar la opacidad del fondo de la barra de progreso */
+#nprogress .peg {
+  box-shadow:
+    0 0 10px var(--nprogress-shadow),
+    0 0 5px var(--nprogress-shadow); /* Efecto de sombra variable */
+}
+
+/* ? ########## CONFIG AOS ########## ?  */
+
+@media (max-width: 768px) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Estilos de colores según el tema */
+
+html {
+  --scrollbar-bg: #f1f1f1;
+  --scrollbar-thumb: #c1c1c1;
+  --nprogress-bar-bg: #0076ff;
+  --nprogress-spinner: #0076ff;
+  --nprogress-shadow: #0076ff;
+}
+
+html.dark {
+  --scrollbar-bg: #3e3e3e;
+  --scrollbar-thumb: #1e1e1e;
+  --nprogress-bar-bg: #3e3e3e;
+  --nprogress-spinner: #0076ff;
+  --nprogress-shadow: #0076ff;
+}
+
+/* Agrega más temas según sea necesario */
