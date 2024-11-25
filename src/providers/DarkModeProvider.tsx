@@ -5,7 +5,7 @@ import { DarkModeContext } from '@/contexts/DarkModeContext'
 export function DarkModeProvider({ children }: { children: React.ReactNode }) {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
     // Carga el estado inicial desde localStorage
-    return localStorage.getItem('darkMode') === 'true' || false
+    return localStorage.getItem('darkMode') === 'true' || true
   })
 
   // Actualiza el DOM y localStorage cada vez que cambia el estado
