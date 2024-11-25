@@ -2,7 +2,7 @@ import Button from '@/components/Base/Button'
 import Lucide from '@/components/Base/Lucide'
 import { userInfo } from '@/stores/userInfo'
 
-function About() {
+function Hero() {
   return (
     <>
       <section className="flex flex-col sm:flex-row items-center gap-5">
@@ -20,7 +20,7 @@ function About() {
             <h1 className="text-2xl sm:text-4xl text-center sm:text-left font-bold text-slate-600 dark:text-slate-100">
               {userInfo.name}
             </h1>
-            <p className="text-slate-700 text-sm sm:text-lg dark:text-slate-300 max-w-xl rounded-2xl pr-10">
+            <p className="text-slate-700 text-sm sm:text-lg dark:text-slate-300 max-w-xl rounded-2xl text-center sm:text-start sm:pr-10">
               {userInfo.descHero}
             </p>
           </div>
@@ -54,4 +54,4 @@ function About() {
   )
 }
 
-export default About
+export default Hero

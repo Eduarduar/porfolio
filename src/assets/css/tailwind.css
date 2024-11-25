@@ -5061,6 +5061,10 @@ input {
   text-align: center;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -5484,8 +5488,16 @@ input {
     padding-bottom: 1.25rem;
   }
 
+  .sm\:pr-10 {
+    padding-right: 2.5rem;
+  }
+
   .sm\:text-left {
     text-align: left;
+  }
+
+  .sm\:text-start {
+    text-align: start;
   }
 
   .sm\:text-4xl {
@@ -5496,6 +5508,16 @@ input {
   .sm\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:pr-10 {
+    padding-right: 2.5rem;
+  }
+
+  .md\:text-start {
+    text-align: start;
   }
 }
 
