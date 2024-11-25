@@ -23,7 +23,8 @@ module.exports = {
         'toast-leave': 'toastLeave 0.5s ease-in forwards',
         'menu-icon-in': 'menuIconIn 0.3s ease-out forwards',
         'menu-icon-out': 'menuIconOut 0.3s ease-in forwards',
-        'provider-out': 'providerOut 1s forwards'
+        'provider-out': 'providerOut 1s forwards',
+        'neon-flicker': 'neonFlicker 12s infinite'
       },
       keyframes: {
         providerOut: {
@@ -32,12 +33,12 @@ module.exports = {
           '100%': { opacity: '0', display: 'none' }
         },
         toastEnter: {
-          '0%': { opacity: '0', transform: 'translateX(-20px)' }, // Entrada desde la izquierda
+          '0%': { opacity: '0', transform: 'translateX(-20px)' },
           '100%': { opacity: '1', transform: 'translateX(0)' }
         },
         toastLeave: {
           '0%': { opacity: '1', transform: 'translateX(0)' },
-          '100%': { opacity: '0', transform: 'translateX(-20px)' } // Salida hacia la izquierda
+          '100%': { opacity: '0', transform: 'translateX(-20px)' }
         },
         menuIconIn: {
           '0%': { opacity: '0', transform: 'translateY(-20px)' },
@@ -46,6 +47,24 @@ module.exports = {
         menuIconOut: {
           '0%': { opacity: '1', transform: 'translateY(0)' },
           '100%': { opacity: '0', transform: 'translateY(-20px)' }
+        },
+        neonFlicker: {
+          '0%': { boxShadow: '0 0 10px rgba(251,157,249,0.4)' },
+          '4%': { boxShadow: '0 0 35px rgba(251,157,249,0.9)' },
+          '10%': { boxShadow: '0 0 0px rgba(251,157,249,0)' }, // Apagón breve
+          '18%': { boxShadow: '0 0 25px rgba(251,157,249,0.7)' },
+          '25%': { boxShadow: '0 0 40px rgba(251,157,249,1)' },
+          '35%': { boxShadow: '0 0 0px rgba(251,157,249,0)' }, // Apagón prolongado
+          '40%': { boxShadow: '0 0 30px rgba(251,157,249,0.8)' },
+          '50%': { boxShadow: '0 0 0px rgba(251,157,249,0)' }, // Otro apagón
+          '58%': { boxShadow: '0 0 40px rgba(251,157,249,1)' },
+          '65%': { boxShadow: '0 0 15px rgba(251,157,249,0.5)' },
+          '72%': { boxShadow: '0 0 0px rgba(251,157,249,0)' },
+          '78%': { boxShadow: '0 0 20px rgba(251,157,249,0.6)' },
+          '85%': { boxShadow: '0 0 40px rgba(251,157,249,1)' },
+          '90%': { boxShadow: '0 0 0px rgba(251,157,249,0)' },
+          '95%': { boxShadow: '0 0 10px rgba(251,157,249,0.4)' },
+          '100%': { boxShadow: '0 0 10px rgba(251,157,249,0.4)' }
         }
       },
       screens: {
