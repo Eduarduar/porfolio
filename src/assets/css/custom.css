@@ -1,3 +1,10 @@
+/* ? ########### Custom Select Text Color ########### ? */
+
+::selection {
+  background: #a74bcc; /* Color variable */
+  color: #fff; /* Color variable */
+}
+
 /* ? ########### Custom Scrollbar ########### ? */
 .scrollbar-custom::-webkit-scrollbar,
 body::-webkit-scrollbar {

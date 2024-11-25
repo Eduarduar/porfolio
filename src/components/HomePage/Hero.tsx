@@ -5,9 +5,13 @@ import { userInfo } from '@/stores/userInfo'
 function Hero() {
   return (
     <>
-      <section className="flex flex-col sm:flex-row items-center gap-5">
+      <section
+        className="flex flex-col sm:flex-row items-center gap-5"
+        data-aos="fade-left"
+        data-aos-delay="100"
+      >
         <div
-          className={`relative min-w-44 min-h-44 bg-indigo-100 dark:bg-gray-700/60 border-8 border-white dark:border-gray-800/80 shadow-lg rounded-full overflow-hidden animate-neon-flicker`}
+          className={`relative min-w-44 min-h-44 bg-indigo-100 dark:bg-gray-700/60 border-8 border-white dark:border-gray-800/80 shadow-lg rounded-full overflow-hidden transition-all animate-neon-flicker`}
         >
           <span className="box-border block overflow-hidden w-auto h-auto bg-none opacity-100 border-0 m-0 p-0 absolute inset-0">
             <img
