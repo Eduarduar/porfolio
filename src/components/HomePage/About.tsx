@@ -45,7 +45,7 @@ function About() {
             </li>
             <li>
               Management of relational and non-relational{' '}
-              <span className="font-bold text-yellow-700 dark:text-yellow-500">databases</span> with{' '}
+              <span className="font-bold text-yellow-600 dark:text-yellow-500">databases</span> with{' '}
               <span className="font-bold text-green-700 dark:text-green-500">PostgreSQL</span>,{' '}
               <span className="font-bold text-blue-700 dark:text-blue-500">MySQL</span>,{' '}
               <span className="font-bold text-red-700 dark:text-red-500">SQLite</span>, among
