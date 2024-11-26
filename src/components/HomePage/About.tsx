@@ -15,41 +15,42 @@ function About() {
             </h2>
           </div>
           <ul className="list-disc flex flex-col gap-2 ml-5 text-slate-700 dark:text-gray-300 text-md">
-            <li>Creation of complete components and user interfaces with different frameworks.</li>
-            <ul className="list-disc flex flex-col gap-2 ml-5 text-slate-700 dark:text-gray-300 text-md">
-              <li className="font-bold text-blue-600 dark:text-blue-400">React</li>
-              <li className="font-bold text-green-600 dark:text-green-400">Vuejs</li>
-            </ul>
             <li>
-              Development of custom APIs with{' '}
+              Designed and implemented attractive interfaces with{' '}
+              <span className="font-bold text-blue-600 dark:text-blue-400">React</span> and{' '}
+              <span className="font-bold text-green-600 dark:text-green-400">Vue.js</span> that
+              improved user experience.
+            </li>
+            <li>
+              Developed custom APIs with{' '}
               <span className="font-bold text-green-700 dark:text-green-500">
                 Django REST Framework
               </span>
-              .
+              , optimizing backend performance.
             </li>
             <li>
-              Creation of real-time chat with{' '}
+              Created real-time chat with{' '}
               <span className="font-bold text-green-700 dark:text-green-500">Django Channels</span>{' '}
-              / <span className="font-bold text-yellow-600 dark:text-yellow-400">Websockets</span>.
+              and <span className="font-bold text-yellow-600 dark:text-yellow-400">Websockets</span>
+              , enhancing application communication.
             </li>
             <li>
-              Development of a video game with{' '}
+              Developed a video game with{' '}
               <span className="font-bold text-red-600 dark:text-red-400">Pygame</span> as a
-              university project.
+              university project, demonstrating skills in programming and game design.
             </li>
             <li>
-              Management of{' '}
+              Managed operating systems{' '}
               <span className="font-bold text-gray-700 dark:text-gray-400">Linux</span> and{' '}
-              <span className="font-bold text-blue-700 dark:text-blue-500">Windows</span> operating
-              systems.
+              <span className="font-bold text-blue-700 dark:text-blue-500">Windows</span>, ensuring
+              stability and security of the development environment.
             </li>
             <li>
-              Management of relational and non-relational{' '}
-              <span className="font-bold text-yellow-600 dark:text-yellow-500">databases</span> with{' '}
+              Administered relational and non-relational databases such as{' '}
               <span className="font-bold text-green-700 dark:text-green-500">PostgreSQL</span>,{' '}
-              <span className="font-bold text-blue-700 dark:text-blue-500">MySQL</span>,{' '}
-              <span className="font-bold text-red-700 dark:text-red-500">SQLite</span>, among
-              others.
+              <span className="font-bold text-blue-700 dark:text-blue-500">MySQL</span>, and{' '}
+              <span className="font-bold text-red-700 dark:text-red-500">SQLite</span>, improving
+              data handling efficiency.
             </li>
           </ul>
         </div>
