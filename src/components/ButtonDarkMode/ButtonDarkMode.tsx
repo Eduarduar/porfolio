@@ -8,7 +8,7 @@ function ButtonDarkMode() {
     <>
       <div className="flex flex-col items-center justify-center">
         <button
-          className="py-2 px-2  flex items-center gap-4 outline-none border-none text-black dark:text-slate-200 relative group"
+          className="py-2 px-2 flex items-center gap-4 outline-none border-none text-black dark:text-slate-200 relative group"
           onClick={toggleDarkMode}
         >
           {isDarkMode ? <Lucide icon="Moon" /> : <Lucide icon="Sun" />}

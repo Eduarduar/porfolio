@@ -28,7 +28,7 @@ export function NotificationDevelop() {
         <div className="font-medium flex mt-1.5">
           <a
             className="text-blue-500 dark:text-blue-400 hover:underline"
-            href="https://github.com/Eduarduar/porfolio"
+            href="https://github.com/Eduarduar/portfolio"
             target="_blank"
           >
             Check changes
