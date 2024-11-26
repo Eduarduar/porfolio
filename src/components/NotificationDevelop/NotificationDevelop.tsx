@@ -20,7 +20,7 @@ export function NotificationDevelop() {
     >
       <Lucide icon="AlertCircle" className="w-6 h-6 text-warning dark:text-yellow-500" />
       <div className="ml-4 mr-4">
-        <div className="font-medium text-slate-200">Page under development</div>
+        <div className="font-medium dark:text-slate-200 text-slate-800">Page under development</div>
         <div className="mt-1 text-slate-500 max-w-[400px] text-wrap dark:text-slate-400">
           If you see this message, it is because the page is under development. Sorry for the
           inconvenience.
