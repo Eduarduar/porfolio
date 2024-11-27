@@ -1,5 +1,6 @@
 import Button from '@/components/Base/Button'
 import Lucide from '@/components/Base/Lucide'
+import DynamicText from '@/components/DynamicText'
 import { userInfo } from '@/stores/userInfo'
 
 function Hero() {
@@ -23,9 +24,9 @@ function Hero() {
           <h1 className="text-2xl sm:text-4xl font-bold text-slate-600 dark:text-slate-100">
             {userInfo.name}
           </h1>
-          <p className="text-slate-700 text-sm sm:text-lg dark:text-slate-300 max-w-xl">
-            {userInfo.descHero}
-          </p>
+          <div className="text-slate-700 text-sm sm:text-lg dark:text-slate-300 max-w-xl min-h-[56px] flex flex-row items-center">
+            <DynamicText phrases={userInfo.descHero} />
+          </div>
         </div>
         <div className="flex gap-3">
           {userInfo.statusWork && (
