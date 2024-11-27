@@ -12,7 +12,6 @@ interface TippyProps {
 }
 
 const Tippy: React.FC<TippyProps> = ({
-  refKey,
   content,
   disable = false,
   as: Component = 'span',
