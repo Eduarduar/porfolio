@@ -11,5 +11,5 @@ export const userInfo: UserInfo = {
   descHero: "I'm a software engineering student with experience in web development.",
   statusWork: true,
   cv: 'https://google.com',
-  image: 'https://github.com/eduarduar.png'
+  image: '/avatar.webp'
 }
