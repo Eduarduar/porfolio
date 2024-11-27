@@ -4713,6 +4713,11 @@ input {
   width: 100%;
 }
 
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .min-w-44 {
   min-width: 11rem;
 }
@@ -5274,6 +5279,10 @@ input {
 
 .text-center {
   text-align: center;
+}
+
+.text-start {
+  text-align: start;
 }
 
 .text-2xl {
@@ -5912,6 +5921,10 @@ input {
     align-items: flex-start;
   }
 
+  .sm\:items-center {
+    align-items: center;
+  }
+
   .sm\:gap-5 {
     gap: 1.25rem;
   }
@@ -5922,6 +5935,10 @@ input {
 
   .sm\:text-left {
     text-align: left;
+  }
+
+  .sm\:text-start {
+    text-align: start;
   }
 
   .sm\:text-4xl {

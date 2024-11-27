@@ -6,7 +6,6 @@ interface DynamicTextProps {
 
 const DynamicText: React.FC<DynamicTextProps> = ({ phrases }) => {
   const [dynamicText, setDynamicText] = useState<string>('')
-  const [isLgScreen, setIsLgScreen] = useState<boolean>(false)
 
   // Variables internas para controlar la animación
   const [shuffledPhrases, setShuffledPhrases] = useState<string[]>([])
@@ -31,8 +30,6 @@ const DynamicText: React.FC<DynamicTextProps> = ({ phrases }) => {
 
   // Función que maneja el efecto de escritura y borrado
   useEffect(() => {
-    if (!isLgScreen) return
-
     const typeEffect = (): void => {
       const currentPhrase = isInitial
         ? phrases[0] // Primera frase (sin barajar)
@@ -67,29 +64,7 @@ const DynamicText: React.FC<DynamicTextProps> = ({ phrases }) => {
     const timeout = setTimeout(typeEffect, isDeleting ? typingSpeed / 2 : typingSpeed)
 
     return () => clearTimeout(timeout)
-  }, [
-    isDeleting,
-    letterIndex,
-    phrases,
-    shuffledPhrases,
-    phraseIndex,
-    isInitial,
-    isLgScreen,
-    shuffleArray
-  ])
-
-  // Función para manejar cambios de tamaño de pantalla
-  useEffect(() => {
-    const handleResize = (): void => {
-      const isLargeScreen = window.innerWidth >= 1024
-      setIsLgScreen(isLargeScreen)
-    }
-
-    handleResize() // Verificar el tamaño de pantalla al montar
-    window.addEventListener('resize', handleResize)
-
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  }, [isDeleting, letterIndex, phrases, shuffledPhrases, phraseIndex, isInitial, shuffleArray])
 
   // Funcion para aparecer y desaparecer el | cada segundo
   useEffect(() => {
@@ -101,12 +76,10 @@ const DynamicText: React.FC<DynamicTextProps> = ({ phrases }) => {
   }, [puntero])
 
   return (
-    isLgScreen && (
-      <div className="dynamic-text">
-        {dynamicText}
-        {puntero && <span className="text-slate-600 dark:text-slate-100">|</span>}
-      </div>
-    )
+    <div>
+      {dynamicText}
+      {puntero && <span className="text-slate-600 dark:text-slate-100">|</span>}
+    </div>
   )
 }
 
