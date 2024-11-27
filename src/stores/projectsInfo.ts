@@ -42,8 +42,8 @@ export const projectsInfo: ProjectInfo[] = [
     pined: false
   },
   {
-    name: 'Light-Out',
-    desc: 'Un juego sobre el cuidado de la luz y el consumo responsable.',
+    name: 'Lights-Out',
+    desc: 'A game about light care and responsible consumption.',
     repo: 'https://github.com/Eduarduar/LightsOut',
     image: '/projects/LightsOut.webp',
     techs: [{ name: 'python', cdn: 'https://icons.ly/python?viewbox=auto&size=20' }],
