@@ -11,8 +11,8 @@ function App() {
     if (window.innerWidth > 768) {
       AOS.init({
         duration: 1000, // Duración de las animaciones en milisegundos
-        easing: 'ease-in-out' // Efecto de la animación
-        // once: true // Si la animación debe ejecutarse solo una vez
+        easing: 'ease-in-out', // Efecto de la animación
+        once: true // Si la animación debe ejecutarse solo una vez
       })
     }
   }, [])

@@ -55,6 +55,11 @@ function About() {
               <span className="font-bold text-red-700 dark:text-red-500">SQLite</span>, improving
               data handling efficiency.
             </li>
+            <li>
+              Developed web pages using{' '}
+              <span className="font-bold text-purple-700 dark:text-purple-500">PHP</span>, enhancing
+              server-side functionality.
+            </li>
           </ul>
         </div>
       </div>
