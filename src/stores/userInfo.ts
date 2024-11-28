@@ -22,7 +22,7 @@ export const userInfo: UserInfo = {
     'Explore my work and discover what we can achieve together.'
   ],
   statusWork: true,
-  cv: 'https://google.com',
+  cv: 'https://rxresu.me/eduarduar/cv-arcega-rodriguez-eduardo',
   image: '/avatar.webp',
   email: 'eduardoarcega1997@gmail.com'
 }

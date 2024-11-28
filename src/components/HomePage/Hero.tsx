@@ -61,11 +61,12 @@ function Hero() {
           <Button
             as="a"
             elevated
-            href="mailto:3duarduar@gmail.com"
+            href={userInfo.cv}
             variant="soft-primary"
             size="sm"
             aria-label="Download CV"
             className="flex items-center gap-2 dark:text-slate-200"
+            target="_blank"
           >
             Download CV
             <Lucide icon="File" />
