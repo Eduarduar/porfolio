@@ -7,7 +7,7 @@ const Home: React.FC = () => {
   return (
     <>
       <NotificationDevelop />
-      <div className="bg-slate-200 dark:bg-gray-900 min-h-[500vh]">
+      <div className="bg-slate-200 dark:bg-gray-900">
         <Header />
         <Main />
       </div>

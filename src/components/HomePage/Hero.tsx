@@ -2,6 +2,8 @@ import Button from '@/components/Base/Button'
 import Lucide from '@/components/Base/Lucide'
 import DynamicText from '@/components/DynamicText'
 import { userInfo } from '@/stores/userInfo'
+import { socialInfo } from '@/stores/socialInfo'
+import Tippy from '../Base/Tippy'
 
 function Hero() {
   return (
@@ -52,6 +54,20 @@ function Hero() {
             Download CV
             <Lucide icon="File" />
           </Button>
+        </div>
+        <div className="flex flex-row gap-2">
+          {socialInfo.map((social) => (
+            <Tippy key={social.name} content={social.name} options={{ placement: 'bottom' }}>
+              <a
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 dark:text-slate-200"
+              >
+                <img src={social.icon} alt={social.name} />
+              </a>
+            </Tippy>
+          ))}
         </div>
       </div>
     </section>

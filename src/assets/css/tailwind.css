@@ -4673,12 +4673,12 @@ input {
   min-height: 500vh;
 }
 
-.min-h-full {
-  min-height: 100%;
-}
-
 .min-h-\[56px\] {
   min-height: 56px;
+}
+
+.min-h-full {
+  min-height: 100%;
 }
 
 .w-0 {
@@ -4709,13 +4709,13 @@ input {
   width: auto;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .min-w-44 {
@@ -4899,10 +4899,6 @@ input {
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.resize {
-  resize: both;
 }
 
 .list-disc {
@@ -5277,20 +5273,12 @@ input {
   padding-right: 3.5rem;
 }
 
-.pr-2 {
-  padding-right: 0.5rem;
-}
-
 .pr-5 {
   padding-right: 1.25rem;
 }
 
 .text-center {
   text-align: center;
-}
-
-.text-start {
-  text-align: start;
 }
 
 .text-2xl {
@@ -5318,10 +5306,6 @@ input {
   line-height: 1rem;
 }
 
-.text-\[2\.6rem\] {
-  font-size: 2.6rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -5332,10 +5316,6 @@ input {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.leading-\[1\.4\] {
-  line-height: 1.4;
 }
 
 .text-\[\#a74bcc\] {
@@ -5453,6 +5433,10 @@ input {
   color: rgb(var(--color-success) / var(--tw-text-opacity, 1));
 }
 
+.text-transparent {
+  color: transparent;
+}
+
 .text-warning {
   --tw-text-opacity: 1;
   color: rgb(var(--color-warning) / var(--tw-text-opacity, 1));
@@ -5466,10 +5450,6 @@ input {
 .text-yellow-600 {
   --tw-text-opacity: 1;
   color: rgb(202 138 4 / var(--tw-text-opacity, 1));
-}
-
-.text-transparent {
-  color: transparent;
 }
 
 .opacity-0 {
@@ -5933,10 +5913,6 @@ input {
     align-items: flex-start;
   }
 
-  .sm\:items-center {
-    align-items: center;
-  }
-
   .sm\:gap-5 {
     gap: 1.25rem;
   }
@@ -5978,41 +5954,6 @@ input {
 @media (min-width: 768px) {
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:ml-16 {
-    margin-left: 4rem;
-  }
-
-  .lg\:flex {
-    display: flex;
-  }
-
-  .lg\:h-screen {
-    height: 100vh;
-  }
-}
-
-@media (min-width: 1280px) {
-  .xl\:ml-28 {
-    margin-left: 7rem;
-  }
-
-  .xl\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .xl\:leading-\[1\.2\] {
-    line-height: 1.2;
-  }
-}
-
-@media (min-width: 1536px) {
-  .\32xl\:ml-36 {
-    margin-left: 9rem;
   }
 }
 

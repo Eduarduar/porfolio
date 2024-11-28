@@ -1,4 +1,5 @@
 import Lucide from '@/components/Base/Lucide'
+import Tippy from '@/components/Base/Tippy'
 
 function About() {
   return (
@@ -6,7 +7,9 @@ function About() {
       <header className="font-bold text-2xl text-[#a74bcc] dark:text-[#cf56ff] mb-6 flex flex-row items-center gap-3">
         <h2>My Experience</h2>
         <div className="py-2 px-2 flex items-center gap-4 outline-none border-none relative">
-          <Lucide icon="FlaskConical" className="w-8 h-8 animate-wave" />
+          <Tippy content="UwU">
+            <Lucide icon="FlaskConical" className="w-8 h-8 animate-wave" />
+          </Tippy>
           <span className="absolute dark:shadow-[0_0_40px_20px_rgba(181,77,225,0.5)] left-[24px] -z-100 transition-all"></span>
         </div>
       </header>

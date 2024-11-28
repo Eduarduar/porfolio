@@ -10,7 +10,9 @@ function Projects() {
       <header className="font-bold text-2xl text-[#a74bcc] dark:text-[#cf56ff] mb-6 flex flex-row items-center gap-3">
         <h2>My Projects</h2>
         <div className="py-2 px-2 flex items-center gap-4 outline-none border-none relative">
-          <LoadingIcon icon="grid" className="w-8 h-8" />
+          <Tippy content="OwO">
+            <LoadingIcon icon="grid" className="w-8 h-8" />
+          </Tippy>
           <span className="absolute dark:shadow-[0_0_40px_20px_rgba(181,77,225,0.5)] left-[18px] -z-100 transition-all"></span>
         </div>
       </header>
@@ -101,7 +103,7 @@ function Projects() {
                 href={project.repo || project.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block group border-2 border-gray-100 hover:border-white dark:border-gray-800 dark:hover:border-gray-300/30 rounded-xl shadow_translate-transition hover:sm:shadow sm:hover:-translate-y-1"
+                className="block group border-2 border-gray-100 hover:border-white dark:border-gray-800 dark:hover:border-gray-300/30 rounded-xl hover:sm:shadow sm:hover:-translate-y-1 transition-all duration-300"
               >
                 <article className="relative flex flex-col justify-between w-full py-6 px-7">
                   <h2 className="text-gray-700 dark:text-gray-200 text-lg font-bold">
