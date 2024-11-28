@@ -25,7 +25,7 @@ function Projects() {
             .map((project) => (
               <article key={project.name} className="grid gap-4 sm:gap-7 md:grid-cols-2 group">
                 <a href={project.live || project.repo} target="_blank" rel="noopener noreferrer">
-                  <div className="relative rounded-xl overflow-hidden flex bg-[rgba(181,77,225,0.2)] dark:bg-[rgba(181,77,225,0.1)]">
+                  <div className="relative rounded-xl overflow-hidden flex bg-[rgba(181,77,225,0.3)] dark:bg-[rgba(181,77,225,0.1)]">
                     <span className="box-border inline-block overflow-hidden w-auto h-auto bg-none opacity-100 border-0 m-0 p-0 relative max-w-full">
                       <span className="box-border block w-auto h-auto bg-none opacity-100 border-0 m-0 p-0 max-w-full relative">
                         {/* Imagen del efecto */}
@@ -62,6 +62,7 @@ function Projects() {
                     {project.repo && (
                       <Button
                         as="a"
+                        elevated
                         href={project.repo}
                         target="_blank"
                         variant="soft-secondary"
@@ -75,6 +76,7 @@ function Projects() {
                     )}
                     {project.live && (
                       <Button
+                        elevated
                         as="a"
                         href={project.live}
                         target="_blank"
@@ -109,7 +111,7 @@ function Projects() {
                   <h2 className="text-gray-700 dark:text-gray-200 text-lg font-bold">
                     {project.name}
                   </h2>
-                  <p className="text-slate-400 dark:text-slate-200">{project.desc}</p>
+                  <p className="text-slate-800 dark:text-slate-200">{project.desc}</p>
                   <div className="flex gap-1 mt-1.5 items-center">
                     {project.techs?.map((tech) => (
                       <Tippy key={tech.name} content={tech.name}>

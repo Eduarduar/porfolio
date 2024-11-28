@@ -34,6 +34,7 @@ function Hero() {
           {userInfo.statusWork && (
             <Button
               as="button"
+              elevated
               variant="soft-success"
               size="sm"
               aria-label="Looking for job"
@@ -45,6 +46,7 @@ function Hero() {
           )}
           <Button
             as="a"
+            elevated
             href="mailto:3duarduar@gmail.com"
             variant="soft-primary"
             size="sm"

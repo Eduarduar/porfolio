@@ -16,6 +16,7 @@ function Email() {
           <div className="flex gap-2">
             <Tippy content="Send Email">
               <Button
+                elevated
                 variant="soft-success"
                 href={`mailto:${userInfo.email}`}
                 className="flex py-2.5 px-4 rounded-lg dark:text-slate-200"
@@ -25,6 +26,7 @@ function Email() {
             </Tippy>
             <Tippy content="Copy Email">
               <Button
+                elevated
                 variant="soft-primary"
                 className="flex py-2.5 px-4 rounded-lg dark:text-slate-200"
                 onClick={() => navigator.clipboard.writeText(userInfo.email)}
