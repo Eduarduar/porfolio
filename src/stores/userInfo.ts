@@ -4,6 +4,7 @@ interface UserInfo {
   statusWork: boolean
   cv: string
   image: string
+  email: string
 }
 
 export const userInfo: UserInfo = {
@@ -22,5 +23,6 @@ export const userInfo: UserInfo = {
   ],
   statusWork: true,
   cv: 'https://google.com',
-  image: '/avatar.webp'
+  image: '/avatar.webp',
+  email: 'eduardoarcega1997@gmail.com'
 }

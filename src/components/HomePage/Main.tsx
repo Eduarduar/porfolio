@@ -1,6 +1,7 @@
 import Hero from '@/components/HomePage/Hero'
 import About from '@/components/HomePage/About'
 import Projects from '@/components/HomePage/Projects'
+import Email from '@/components/HomePage/Email'
 
 function Main() {
   return (
@@ -9,6 +10,7 @@ function Main() {
       <hr className="border border-dotted border-gray-300 dark:border-gray-600 rounded-md"></hr>
       <About />
       <Projects />
+      <Email />
     </div>
   )
 }
