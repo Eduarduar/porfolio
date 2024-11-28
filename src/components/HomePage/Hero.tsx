@@ -3,9 +3,14 @@ import Lucide from '@/components/Base/Lucide'
 import DynamicText from '@/components/DynamicText'
 import { userInfo } from '@/stores/userInfo'
 import { socialInfo } from '@/stores/socialInfo'
+import { Menu } from '@/components/Base/Headless'
+import { useCVSpanish } from '@/hooks/CV/useCvSpanish'
+import { useCVEnglish } from '@/hooks/CV/useCvEnglish'
 import Tippy from '../Base/Tippy'
 
 function Hero() {
+  const { loadCVSpanish } = useCVSpanish()
+  const { loadCVEnglish } = useCVEnglish()
   return (
     <section
       className="flex flex-col sm:flex-row items-center gap-5"
@@ -58,19 +63,45 @@ function Hero() {
               <Lucide icon="Radar" />
             </Button>
           )}
-          <Button
-            as="a"
-            elevated
-            href={userInfo.cv}
-            variant="soft-primary"
-            size="sm"
-            aria-label="Download CV"
-            className="flex items-center gap-2 dark:text-slate-200"
-            target="_blank"
-          >
-            Download CV
-            <Lucide icon="File" />
-          </Button>
+
+          <Menu className="h-5">
+            <Menu.Button>
+              <Button
+                elevated
+                variant="soft-primary"
+                size="sm"
+                aria-label="Download CV"
+                className="flex items-center gap-2 dark:text-slate-200"
+              >
+                Download CV
+                <Lucide icon="File" />
+              </Button>
+            </Menu.Button>
+            <Menu.Items className="w-40 dark:bg-slate-900/80 bg-slate-200/80 rounded-md shadow-lg">
+              <Menu.Item
+                className="flex flex-row gap-2 items-center justify-around text-slate-800 dark:text-slate-200 dark:bg-slate-900/50 bg-slate-200/50 hover:bg-slate-400/50"
+                onClick={loadCVEnglish}
+              >
+                <img
+                  src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1fa-1f1f8.svg"
+                  alt="United States flag"
+                  className="w-5 h-5"
+                />
+                <span>English</span>
+              </Menu.Item>
+              <Menu.Item
+                className="flex flex-row gap-2 items-center justify-around text-slate-800 dark:text-slate-200 dark:bg-slate-900/50 bg-slate-200/50 hover:bg-slate-400/50"
+                onClick={loadCVSpanish}
+              >
+                <img
+                  src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1ea-1f1f8.svg"
+                  className="w-5 h-5"
+                  alt="Spain flag"
+                />
+                <span>Spanish</span>
+              </Menu.Item>
+            </Menu.Items>
+          </Menu>
         </div>
         <div className="flex flex-row gap-2">
           {socialInfo.map((social) => (
