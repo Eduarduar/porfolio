@@ -23,9 +23,23 @@ function Hero() {
       </div>
       <div className="flex flex-col items-center sm:items-start gap-3">
         <div className="text-center sm:text-left flex flex-col items-center sm:items-start">
-          <h1 className="text-2xl sm:text-4xl font-bold text-slate-600 dark:text-slate-100">
-            {userInfo.name}
-          </h1>
+          <div
+            className="badge-base LI-profile-badge"
+            data-locale="es_ES"
+            data-size="large"
+            data-theme="light"
+            data-type="HORIZONTAL"
+            data-vanity="eduarduar-ar-506a07289"
+            data-version="v1"
+          >
+            <a
+              className="badge-base__link LI-simple-link text-2xl sm:text-4xl font-bold text-slate-600 dark:text-slate-100"
+              href="https://mx.linkedin.com/in/eduarduar-ar-506a07289?trk=profile-badge"
+              target="_blank"
+            >
+              Eduarduar AR
+            </a>
+          </div>
           <div className="text-slate-700 text-sm sm:text-lg dark:text-slate-300 max-w-xl w-fit min-h-[56px] flex flex-row text-center sm:text-start items-center justify-center pr-5">
             <DynamicText phrases={userInfo.descHero} />
           </div>
