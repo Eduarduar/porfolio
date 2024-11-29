@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 
-interface PDFRedirectProps {
+interface PDFViewerProps {
   pdfUrl: string
 }
 
-const PDFRedirect: React.FC<PDFRedirectProps> = ({ pdfUrl }) => {
+const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl }) => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -34,4 +34,4 @@ const PDFRedirect: React.FC<PDFRedirectProps> = ({ pdfUrl }) => {
   )
 }
 
-export default PDFRedirect
+export default PDFViewer
