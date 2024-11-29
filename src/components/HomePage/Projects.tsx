@@ -66,9 +66,9 @@ function Projects() {
                         href={project.repo}
                         target="_blank"
                         variant="soft-secondary"
-                        className="flex hover:gap-3 group/buttonLive dark:text-slate-200 border-none bg-gray-400"
+                        className="flex gap-3 sm:gap-0 hover:gap-3 group/buttonLive dark:text-slate-200 border-none bg-gray-400"
                       >
-                        <span className="w-0 overflow-hidden group-hover/buttonLive:w-[50px] transition-all">
+                        <span className="sm:w-0 sm:overflow-hidden sm:group-hover/buttonLive:w-[50px] transition-all">
                           GitHub
                         </span>
                         <Lucide icon="Github" className="w-6 h-6" />
@@ -81,9 +81,9 @@ function Projects() {
                         href={project.live}
                         target="_blank"
                         variant="soft-primary"
-                        className="flex hover:gap-3 group/buttonLive dark:text-slate-200 border-none"
+                        className="flex gap-3 sm:gap-0 hover:gap-3 group/buttonLive dark:text-slate-200 border-none"
                       >
-                        <span className="w-0 overflow-hidden group-hover/buttonLive:w-[40px] transition-all">
+                        <span className="sm:w-0 sm:overflow-hidden sm:group-hover/buttonLive:w-[40px] transition-all">
                           Live
                         </span>
                         <Lucide icon="ExternalLink" className="w-6 h-6" />
