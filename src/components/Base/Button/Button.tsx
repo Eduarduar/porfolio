@@ -41,6 +41,7 @@ interface ButtonProps {
   target?: string
   rel?: string
   type?: 'button' | 'submit' | 'reset'
+  to?: string
 }
 
 const Button: React.FC<ButtonProps> = ({

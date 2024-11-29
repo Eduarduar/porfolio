@@ -1,13 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, ReactNode } from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import Home from '@/views/Home'
+import PDFRedirect from '@/views/PDFRedirect'
+import NotFound from '@/views/NotFound'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css' // Importa el estilo predeterminado
+import { certificationsInfo } from '@/stores/certificationsInfo'
 
 // Configuración opcional
 NProgress.configure({ showSpinner: false, speed: 500 })
-
-import { ReactNode } from 'react'
 
 interface RouteChangeHandlerProps {
   children: ReactNode
@@ -40,7 +41,14 @@ const AppRoutes: React.FC = () => {
       <RouteChangeHandler>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* Agrega más rutas según sea necesario */}
+          {certificationsInfo.map((certification) => (
+            <Route
+              key={certification.name}
+              path={certification.pagePath}
+              element={<PDFRedirect pdfUrl={certification.path} />}
+            />
+          ))}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </RouteChangeHandler>
     </Router>
