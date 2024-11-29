@@ -8,7 +8,7 @@ interface UserInfo {
 }
 
 export const userInfo: UserInfo = {
-  name: 'Eduarduar AR',
+  name: 'Eduardo Arcega Rodriguez',
   descHero: [
     'I am a software engineering student with experience in web development.',
     'Passionate about creating interactive and dynamic user experiences.',
