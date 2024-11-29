@@ -1,6 +1,7 @@
 import Button from '@/components/Base/Button'
 import Lucide from '@/components/Base/Lucide'
 import DynamicText from '@/components/DynamicText'
+import LoadingIcon from '@/components/Base/LoadingIcon'
 import { userInfo } from '@/stores/userInfo'
 import { socialInfo } from '@/stores/socialInfo'
 import { Menu } from '@/components/Base/Headless'
@@ -9,8 +10,8 @@ import { useCVEnglish } from '@/hooks/CV/useCvEnglish'
 import Tippy from '../Base/Tippy'
 
 function Hero() {
-  const { loadCVSpanish } = useCVSpanish()
-  const { loadCVEnglish } = useCVEnglish()
+  const { loadCVSpanish, loadingCVSpanish } = useCVSpanish()
+  const { loadCVEnglish, loadingCVEnglish } = useCVEnglish()
   return (
     <section
       className="flex flex-col sm:flex-row items-center gap-5"
@@ -74,7 +75,11 @@ function Hero() {
                 className="flex items-center gap-2 dark:text-slate-200"
               >
                 Download CV
-                <Lucide icon="File" />
+                {!loadingCVEnglish && !loadingCVSpanish ? (
+                  <Lucide icon="File" />
+                ) : (
+                  <LoadingIcon icon="tail-spin" />
+                )}
               </Button>
             </Menu.Button>
             <Menu.Items className="w-40 dark:bg-slate-900/80 bg-slate-200/80 rounded-md shadow-lg">
