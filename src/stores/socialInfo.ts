@@ -7,7 +7,7 @@ interface SocialInfo {
 export const socialInfo: SocialInfo[] = [
   {
     name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/eduarduar-ar-506a07289/',
+    url: 'https://www.linkedin.com/in/eduarduar/',
     icon: 'https://icons.ly/linkedin?viewbox=auto&size=20'
   },
   {
