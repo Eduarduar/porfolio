@@ -14,10 +14,10 @@ export const socialInfo: SocialInfo[] = [
     name: 'GitHub',
     url: 'https://github.com/Eduarduar',
     icon: 'https://icons.ly/github/gray?viewbox=auto&size=20'
-  },
-  {
-    name: 'X',
-    url: 'https://x.com/3duarduar',
-    icon: 'https://icons.ly/x/gray?viewbox=auto&size=20'
   }
+  // {
+  //   name: 'X',
+  //   url: 'https://x.com/3duarduar',
+  //   icon: 'https://icons.ly/x/gray?viewbox=auto&size=20'
+  // }
 ]
