@@ -2,6 +2,7 @@ import React, { useEffect, ReactNode, lazy, Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import NProgress from 'nprogress'
 import LoadingPage from '@/views/LoadingPage'
+import NotFound from '@/views/NotFound'
 import 'nprogress/nprogress.css' // Importa el estilo predeterminado
 import { certificationsInfo } from '@/stores/certificationsInfo'
 
@@ -10,7 +11,6 @@ NProgress.configure({ showSpinner: false, speed: 500 })
 
 const Home = lazy(() => import('@/views/Home'))
 const PDFRedirect = lazy(() => import('@/views/PDFViewer'))
-const NotFound = lazy(() => import('@/views/NotFound'))
 
 interface RouteChangeHandlerProps {
   children: ReactNode
@@ -43,7 +43,10 @@ const AppRoutes: React.FC = () => {
       <RouteChangeHandler>
         <Suspense fallback={<LoadingPage />}>
           <Routes>
+            {/* Ruta de inicio */}
             <Route path="/" element={<Home />} />
+
+            {/* Rutas dinámicas para las certificaciones */}
             {certificationsInfo.map((certification) => (
               <Route
                 key={certification.name}
@@ -51,6 +54,8 @@ const AppRoutes: React.FC = () => {
                 element={<PDFRedirect pdfUrl={certification.path} />}
               />
             ))}
+
+            {/* Ruta 404 */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
