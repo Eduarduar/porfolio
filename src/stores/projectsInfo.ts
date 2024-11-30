@@ -21,13 +21,13 @@ export const projectsInfo: ProjectInfo[] = [
     live: 'http://summerlearn.org/',
     image: '/projects/SummerLearn.webp',
     techs: [
-      { name: 'typescript', cdn: 'https://icons.ly/typescript?viewbox=auto&size=20' },
-      { name: 'javascript', cdn: 'https://icons.ly/javascript?viewbox=auto&size=20' },
-      { name: 'vue.js', cdn: 'https://icons.ly/vuedotjs?viewbox=auto&size=20' },
-      { name: 'jwt', cdn: 'https://icons.ly/jsonwebtokens/gray?viewbox=auto&size=20' },
-      { name: 'node.js', cdn: 'https://icons.ly/nodedotjs?viewbox=auto&size=20' },
-      { name: 'tailwindcss', cdn: 'https://icons.ly/tailwindcss?viewbox=auto&size=20' },
-      { name: 'vite', cdn: 'https://icons.ly/vite?viewbox=auto&size=20' }
+      { name: 'Typescript', cdn: 'https://icons.ly/typescript?viewbox=auto&size=20' },
+      { name: 'Javascript', cdn: 'https://icons.ly/javascript?viewbox=auto&size=20' },
+      { name: 'Vue.js', cdn: 'https://icons.ly/vuedotjs?viewbox=auto&size=20' },
+      { name: 'JWT', cdn: 'https://icons.ly/jsonwebtokens/gray?viewbox=auto&size=20' },
+      { name: 'Node.js', cdn: 'https://icons.ly/nodedotjs?viewbox=auto&size=20' },
+      { name: 'TailwindCSS', cdn: 'https://icons.ly/tailwindcss?viewbox=auto&size=20' },
+      { name: 'Vite', cdn: 'https://icons.ly/vite?viewbox=auto&size=20' }
     ],
     pined: true
   },
@@ -48,7 +48,7 @@ export const projectsInfo: ProjectInfo[] = [
     desc: 'A game about light care and responsible consumption.',
     repo: 'https://github.com/Eduarduar/LightsOut',
     image: '/projects/LightsOut.webp',
-    techs: [{ name: 'python', cdn: 'https://icons.ly/python?viewbox=auto&size=20' }],
+    techs: [{ name: 'Python', cdn: 'https://icons.ly/python?viewbox=auto&size=20' }],
     pined: true
   },
   {
@@ -57,12 +57,12 @@ export const projectsInfo: ProjectInfo[] = [
     repo: 'https://github.com/Eduarduar/blogMarino',
     image: '/projects/DeepOcean.webp',
     techs: [
-      { name: 'php', cdn: 'https://icons.ly/php?viewbox=auto&size=20' },
-      { name: 'mysql', cdn: 'https://icons.ly/mysql?viewbox=auto&size=20' },
-      { name: 'javascript', cdn: 'https://icons.ly/javascript?viewbox=auto&size=20' },
-      { name: 'jquery', cdn: 'https://icons.ly/jquery?viewbox=auto&size=20' },
-      { name: 'tailwindcss', cdn: 'https://icons.ly/tailwindcss?viewbox=auto&size=20' },
-      { name: 'html5', cdn: 'https://icons.ly/html5?viewbox=auto&size=20' }
+      { name: 'PHP', cdn: 'https://icons.ly/php?viewbox=auto&size=20' },
+      { name: 'MySql', cdn: 'https://icons.ly/mysql?viewbox=auto&size=20' },
+      { name: 'Javascript', cdn: 'https://icons.ly/javascript?viewbox=auto&size=20' },
+      { name: 'JQuery', cdn: 'https://icons.ly/jquery?viewbox=auto&size=20' },
+      { name: 'TailwindCSS', cdn: 'https://icons.ly/tailwindcss?viewbox=auto&size=20' },
+      { name: 'HTML5', cdn: 'https://icons.ly/html5?viewbox=auto&size=20' }
     ],
     pined: true
   },
@@ -73,11 +73,11 @@ export const projectsInfo: ProjectInfo[] = [
     image: '/projects/Credenciales.webp',
     techs: [
       { name: 'php', cdn: 'https://icons.ly/php?viewbox=auto&size=20' },
-      { name: 'mysql', cdn: 'https://icons.ly/mysql?viewbox=auto&size=20' },
-      { name: 'javascript', cdn: 'https://icons.ly/javascript?viewbox=auto&size=20' },
-      { name: 'jquery', cdn: 'https://icons.ly/jquery?viewbox=auto&size=20' },
-      { name: 'html5', cdn: 'https://icons.ly/html5?viewbox=auto&size=20' },
-      { name: 'css3', cdn: 'https://icons.ly/css3?viewbox=auto&size=20' }
+      { name: 'MySql', cdn: 'https://icons.ly/mysql?viewbox=auto&size=20' },
+      { name: 'Javascript', cdn: 'https://icons.ly/javascript?viewbox=auto&size=20' },
+      { name: 'JQuery', cdn: 'https://icons.ly/jquery?viewbox=auto&size=20' },
+      { name: 'HTML5', cdn: 'https://icons.ly/html5?viewbox=auto&size=20' },
+      { name: 'CSS3', cdn: 'https://icons.ly/css3?viewbox=auto&size=20' }
     ],
     pined: false
   },
@@ -86,11 +86,11 @@ export const projectsInfo: ProjectInfo[] = [
     desc: 'A portfolio for showing my projects and information.',
     repo: 'https://github.com/Eduarduar/portfolio',
     techs: [
-      { name: 'typescript', cdn: 'https://icons.ly/typescript?viewbox=auto&size=20' },
-      { name: 'react', cdn: 'https://icons.ly/react?viewbox=auto&size=20' },
-      { name: 'tailwindcss', cdn: 'https://icons.ly/tailwindcss?viewbox=auto&size=20' },
-      { name: 'vite', cdn: 'https://icons.ly/vite?viewbox=auto&size=20' },
-      { name: 'node.js', cdn: 'https://icons.ly/nodedotjs?viewbox=auto&size=20' }
+      { name: 'Typescript', cdn: 'https://icons.ly/typescript?viewbox=auto&size=20' },
+      { name: 'React', cdn: 'https://icons.ly/react?viewbox=auto&size=20' },
+      { name: 'TailwindCSS', cdn: 'https://icons.ly/tailwindcss?viewbox=auto&size=20' },
+      { name: 'Vite', cdn: 'https://icons.ly/vite?viewbox=auto&size=20' },
+      { name: 'Node.js', cdn: 'https://icons.ly/nodedotjs?viewbox=auto&size=20' }
     ],
     pined: false
   }

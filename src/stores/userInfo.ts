@@ -1,5 +1,6 @@
 interface UserInfo {
-  name: string
+  firstName: string
+  lastName: string
   descHero: string[]
   statusWork: boolean
   cv: string
@@ -8,7 +9,8 @@ interface UserInfo {
 }
 
 export const userInfo: UserInfo = {
-  name: 'Eduardo Arcega Rodriguez',
+  firstName: 'Eduardo',
+  lastName: 'Arcega Rodriguez',
   descHero: [
     'I am a software engineering student with experience in web development.',
     'Passionate about creating interactive and dynamic user experiences.',

@@ -53,7 +53,7 @@ function Hero() {
         <span className="box-border block w-auto h-auto absolute inset-0">
           <img
             src={userInfo.image}
-            alt={`${userInfo.name}'s profile`}
+            alt={`${userInfo.firstName} ${userInfo.lastName}'s profile`}
             className="absolute inset-0 w-full h-full object-cover rounded-full drop-shadow-2xl"
           />
         </span>
@@ -96,26 +96,22 @@ function Hero() {
 
         <div className="flex gap-3">
           {userInfo.statusWork && (
-            <Button
-              as="button"
-              elevated
-              variant="soft-success"
-              size="sm"
+            <span
               aria-label="Looking for job"
-              className="flex items-center gap-2 dark:text-slate-200"
+              className={`transition duration-200 border justify-center rounded-md font-medium text-xs py-1.5 px-2 bg-success border-success dark:bg-opacity-20 border-opacity-5 dark:border-success dark:border-opacity-20 shadow-md flex items-center gap-2 text-slate-200 cursor-default`}
             >
               Looking for job
               <Lucide icon="Radar" />
-            </Button>
+            </span>
           )}
           <Menu className="h-5">
             <Menu.Button>
               <Button
                 elevated
-                variant="soft-primary"
+                variant={isDarkMode ? 'soft-primary' : 'primary'}
                 size="sm"
                 aria-label="Download CV"
-                className="flex items-center gap-2 dark:text-slate-200"
+                className="flex items-center gap-2 dark:text-slate-200 dark:border-none select-none"
               >
                 Download CV
                 {!loadingCVEnglish && !loadingCVSpanish ? (

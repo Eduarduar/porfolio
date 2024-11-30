@@ -66,7 +66,7 @@ function Projects() {
                         href={project.repo}
                         target="_blank"
                         variant="soft-secondary"
-                        className="flex gap-3 sm:gap-0 hover:gap-3 group/buttonLive dark:text-slate-200 border-none bg-gray-400"
+                        className="flex gap-3 sm:gap-0 hover:gap-3 group/buttonLive text-slate-900 dark:text-slate-200 border-none bg-gray-400 font-bold"
                       >
                         <span className="sm:w-0 sm:overflow-hidden sm:group-hover/buttonLive:w-[50px] transition-all">
                           GitHub
@@ -81,7 +81,7 @@ function Projects() {
                         href={project.live}
                         target="_blank"
                         variant="soft-primary"
-                        className="flex gap-3 sm:gap-0 hover:gap-3 group/buttonLive dark:text-slate-200 border-none"
+                        className="flex gap-3 sm:gap-0 hover:gap-3 group/buttonLive dark:text-slate-200 border-none font-bold"
                       >
                         <span className="sm:w-0 sm:overflow-hidden sm:group-hover/buttonLive:w-[40px] transition-all">
                           Live
@@ -105,7 +105,7 @@ function Projects() {
                 href={project.repo || project.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block group border-2 border-gray-100 hover:border-white dark:border-gray-800 dark:hover:border-gray-300/30 rounded-xl hover:sm:shadow sm:hover:-translate-y-1 transition-all duration-300"
+                className="block group border-2 bg-violet-500/10 hover:bg-violet-500/20 border-violet-500/10 hover:border-violet-500/50 dark:border-gray-800 dark:hover:border-gray-300/30 dark:bg-slate-800 rounded-xl hover:sm:shadow sm:hover:-translate-y-1 transition-all duration-300"
               >
                 <article className="relative flex flex-col justify-between w-full py-6 px-7">
                   <h2 className="text-gray-700 dark:text-gray-200 text-lg font-bold">
@@ -119,7 +119,7 @@ function Projects() {
                       </Tippy>
                     ))}
                   </div>
-                  <div className="absolute grid place-items-center right-2 top-2 bg-slate-200 dark:bg-slate-800 w-9 h-9 rounded-full scale-0 group-hover:scale-90 transition-all">
+                  <div className="absolute grid place-items-center right-2 top-2 bg-white/50 dark:bg-slate-800 w-9 h-9 rounded-full scale-0 group-hover:scale-90 transition-all">
                     <Lucide
                       icon="ArrowUpRight"
                       className="text-gray-800 dark:text-gray-50 text-2xl"

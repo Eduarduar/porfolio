@@ -48,8 +48,12 @@ const Header: React.FC = () => {
                 className="absolute inset-0 box-border p-0 border-none m-auto block w-0 h-0 min-h-full min-w-full max-h-full max-w-full object-cover rounded-full drop-shadow-2xl"
               />
             </span>
-            <span className="ml-14 font-semibold text-lg whitespace-nowrap text-slate-600 dark:text-slate-300">
-              {userInfo.name}
+            <span className="hidden sm:block ml-14 font-semibold text-lg whitespace-nowrap text-slate-800 dark:text-slate-300">
+              {userInfo.firstName} {userInfo.lastName}
+            </span>
+
+            <span className="sm:hidden ml-14 font-semibold text-lg whitespace-nowrap text-slate-800 dark:text-slate-300">
+              {userInfo.firstName}
             </span>
           </div>
           <ButtonDarkMode />

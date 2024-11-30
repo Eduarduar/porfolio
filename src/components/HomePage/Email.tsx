@@ -2,8 +2,10 @@ import Tippy from '@/components/Base/Tippy'
 import Lucide from '@/components/Base/Lucide'
 import Button from '@/components/Base/Button'
 import { userInfo } from '@/stores/userInfo'
+import { useDarkMode } from '@/hooks/useDarkMode'
 
 function Email() {
+  const { isDarkMode } = useDarkMode()
   return (
     <>
       <section className="w-full py-5">
@@ -19,9 +21,9 @@ function Email() {
               <Button
                 as={'a'}
                 elevated
-                variant="soft-success"
+                variant={isDarkMode ? 'soft-success' : 'success'}
                 href={`mailto:${userInfo.email}`}
-                className="flex py-2.5 px-4 rounded-lg dark:text-slate-200"
+                className="flex py-2.5 px-4 rounded-lg text-slate-200"
               >
                 <Lucide icon="Send"></Lucide>
               </Button>
@@ -29,7 +31,7 @@ function Email() {
             <Tippy content="Copy Email">
               <Button
                 elevated
-                variant="soft-primary"
+                variant={isDarkMode ? 'soft-primary' : 'primary'}
                 className="flex py-2.5 px-4 rounded-lg dark:text-slate-200"
                 onClick={() => navigator.clipboard.writeText(userInfo.email)}
               >
