@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "format": "prettier --write src/",
     "tailwind": "npx tailwindcss -i ./src/assets/css/input.css -o ./src/assets/css/tailwind.css --watch",
-    "deploy": "npm run build && git add . && git push -u origin production"
+    "deploy": "npm run build && git push -u origin production"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
