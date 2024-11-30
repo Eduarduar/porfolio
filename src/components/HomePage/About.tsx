@@ -1,9 +1,17 @@
 import Lucide from '@/components/Base/Lucide'
 import Tippy from '@/components/Base/Tippy'
+import { useEffect } from 'react'
 
 function About() {
+  useEffect(() => {
+    setTimeout(() => {
+      const about = document.getElementById('about')
+      if (about) about.removeAttribute('data-aos')
+    }, 2000)
+  }, [])
+
   return (
-    <section className="w-full" data-aos="fade-up" data-aos-delay="100">
+    <section className="w-full " data-aos="fade-up" data-aos-delay="100" id="about">
       <header className="font-bold text-2xl text-[#a74bcc] dark:text-[#cf56ff] mb-6 flex flex-row items-center gap-3">
         <h2>My Experience</h2>
         <div className="py-2 px-2 flex items-center gap-4 outline-none border-none relative">

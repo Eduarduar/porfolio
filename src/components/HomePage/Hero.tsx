@@ -1,3 +1,9 @@
+import { useState, useEffect } from 'react'
+declare global {
+  interface Window {
+    LI: any
+  }
+}
 import Button from '@/components/Base/Button'
 import Lucide from '@/components/Base/Lucide'
 import DynamicText from '@/components/DynamicText'
@@ -7,14 +13,36 @@ import { socialInfo } from '@/stores/socialInfo'
 import { Menu } from '@/components/Base/Headless'
 import { useCVSpanish } from '@/hooks/CV/useCvSpanish'
 import { useCVEnglish } from '@/hooks/CV/useCvEnglish'
-import Tippy from '../Base/Tippy'
+import Tippy from '@/components/Base/Tippy'
 
 function Hero() {
   const { loadCVSpanish, loadingCVSpanish } = useCVSpanish()
   const { loadCVEnglish, loadingCVEnglish } = useCVEnglish()
+  const [tooltip, setTooltip] = useState(false)
+
+  useEffect(() => {
+    // Cargar el script de LinkedIn dinámicamente
+    const script = document.createElement('script')
+    script.src = 'https://platform.linkedin.com/badges/js/profile.js'
+    script.async = true
+    script.defer = true
+    script.onload = () => {
+      // Forzar la inicialización después de cargar el script
+      if (window.LI) {
+        window.LI.parse()
+      }
+    }
+    document.body.appendChild(script)
+
+    // Eliminar el script cuando el componente se desmonte
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
+
   return (
     <section
-      className="flex flex-col sm:flex-row items-center gap-5"
+      className=" relative flex flex-col sm:flex-row items-center gap-5"
       data-aos="fade-left"
       data-aos-delay="100"
     >
@@ -28,28 +56,32 @@ function Hero() {
         </span>
       </div>
       <div className="flex flex-col items-center sm:items-start gap-3">
-        <div className="text-center sm:text-left flex flex-col items-center sm:items-start">
+        <div className="text-center sm:text-left flex flex-col items-center sm:items-start relative">
+          {/* Contenedor del Nombre con Tooltip */}
           <div
-            className="badge-base LI-profile-badge"
-            data-locale="es_ES"
-            data-size="large"
-            data-theme="light"
-            data-type="HORIZONTAL"
-            data-vanity="eduarduar"
-            data-version="v1"
+            className="relative group"
+            onMouseEnter={() => setTooltip(true)}
+            onMouseLeave={() => setTooltip(false)}
           >
-            <a
-              className="badge-base__link LI-simple-link text-2xl sm:text-4xl font-bold text-slate-600 dark:text-slate-100"
-              href="https://mx.linkedin.com/in/eduarduar?trk=profile-badge"
-              target="_blank"
-            >
-              {userInfo.name}
-            </a>
+            <div className="text-2xl sm:text-4xl font-bold text-slate-600 w-full dark:text-slate-100 transform transition-all hover:scale-95 cursor-pointer ">
+              <span>Eduardo Arcega Rodriguez</span>
+            </div>
+            <div
+              className={`badge-base LI-profile-badge absolute left-1/2 -translate-x-1/2 !max-w-[250px] overflow-hidden !max-h-[260px] text-sm rounded-md z-[1000] m-0 p-0 transition-opacity duration-200 ${tooltip ? 'opacity-100 block ' : 'opacity-0 -translate-y-[30rem]'}`}
+              data-locale="es_ES"
+              data-size="medium"
+              data-theme="light"
+              data-type="VERTICAL"
+              data-vanity="eduarduar"
+              data-version="v1"
+            ></div>
           </div>
+          {/* Descripción */}
           <div className="text-slate-700 text-sm sm:text-lg dark:text-slate-300 max-w-xl w-fit min-h-[56px] flex flex-row text-center sm:text-start items-center justify-center pr-5">
             <DynamicText phrases={userInfo.descHero} />
           </div>
         </div>
+
         <div className="flex gap-3">
           {userInfo.statusWork && (
             <Button
@@ -64,7 +96,6 @@ function Hero() {
               <Lucide icon="Radar" />
             </Button>
           )}
-
           <Menu className="h-5">
             <Menu.Button>
               <Button
