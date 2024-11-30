@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write src/",
-    "tailwind": "npx tailwindcss -i ./src/assets/css/input.css -o ./src/assets/css/tailwind.css --watch"
+    "tailwind": "npx tailwindcss -i ./src/assets/css/input.css -o ./src/assets/css/tailwind.css --watch",
+    "deploy": "npm run build && git add . && git commit -m \"Build and deploy\" && git push -u origin production"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",

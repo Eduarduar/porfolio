@@ -67,7 +67,9 @@ function Hero() {
             onMouseLeave={() => setTooltip(false)}
           >
             <div className="text-2xl sm:text-4xl font-bold text-slate-600 w-full dark:text-slate-100 transform transition-all hover:scale-95 cursor-pointer ">
-              <span>Eduardo Arcega Rodriguez</span>
+              <>
+                {userInfo.firstName} {userInfo.lastName}
+              </>
             </div>
             <div
               className={`badge-base LI-profile-badge absolute left-1/2 -translate-x-1/2 !max-w-[250px] overflow-hidden !max-h-[260px] text-sm rounded-md z-[1000] m-0 p-0 transition-opacity duration-200 ${!isDarkMode && tooltip ? 'opacity-100 block ' : 'opacity-0 -translate-y-[30rem]'}`}
