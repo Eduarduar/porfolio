@@ -13,12 +13,15 @@ import { socialInfo } from '@/stores/socialInfo'
 import { Menu } from '@/components/Base/Headless'
 import { useCVSpanish } from '@/hooks/CV/useCvSpanish'
 import { useCVEnglish } from '@/hooks/CV/useCvEnglish'
+import { useDarkMode } from '@/hooks/useDarkMode'
 import Tippy from '@/components/Base/Tippy'
 
 function Hero() {
   const { loadCVSpanish, loadingCVSpanish } = useCVSpanish()
   const { loadCVEnglish, loadingCVEnglish } = useCVEnglish()
   const [tooltip, setTooltip] = useState(false)
+
+  const { isDarkMode } = useDarkMode()
 
   useEffect(() => {
     // Cargar el script de LinkedIn dinámicamente
@@ -67,10 +70,19 @@ function Hero() {
               <span>Eduardo Arcega Rodriguez</span>
             </div>
             <div
-              className={`badge-base LI-profile-badge absolute left-1/2 -translate-x-1/2 !max-w-[250px] overflow-hidden !max-h-[260px] text-sm rounded-md z-[1000] m-0 p-0 transition-opacity duration-200 ${tooltip ? 'opacity-100 block ' : 'opacity-0 -translate-y-[30rem]'}`}
+              className={`badge-base LI-profile-badge absolute left-1/2 -translate-x-1/2 !max-w-[250px] overflow-hidden !max-h-[260px] text-sm rounded-md z-[1000] m-0 p-0 transition-opacity duration-200 ${!isDarkMode && tooltip ? 'opacity-100 block ' : 'opacity-0 -translate-y-[30rem]'}`}
               data-locale="es_ES"
               data-size="medium"
               data-theme="light"
+              data-type="VERTICAL"
+              data-vanity="eduarduar"
+              data-version="v1"
+            ></div>
+            <div
+              className={`badge-base LI-profile-badge absolute left-1/2 -translate-x-1/2 !max-w-[250px] overflow-hidden !max-h-[260px] text-sm rounded-md z-[1000] m-0 p-0 transition-opacity duration-200 ${isDarkMode && tooltip ? 'opacity-100 block ' : 'opacity-0 -translate-y-[30rem]'}`}
+              data-locale="es_ES"
+              data-size="medium"
+              data-theme="dark"
               data-type="VERTICAL"
               data-vanity="eduarduar"
               data-version="v1"
