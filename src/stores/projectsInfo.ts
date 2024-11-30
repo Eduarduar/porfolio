@@ -72,7 +72,7 @@ export const projectsInfo: ProjectInfo[] = [
     repo: 'https://github.com/Eduarduar/credenciales',
     image: '/projects/Credenciales.webp',
     techs: [
-      { name: 'php', cdn: 'https://icons.ly/php?viewbox=auto&size=20' },
+      { name: 'PHP', cdn: 'https://icons.ly/php?viewbox=auto&size=20' },
       { name: 'MySql', cdn: 'https://icons.ly/mysql?viewbox=auto&size=20' },
       { name: 'Javascript', cdn: 'https://icons.ly/javascript?viewbox=auto&size=20' },
       { name: 'JQuery', cdn: 'https://icons.ly/jquery?viewbox=auto&size=20' },
