@@ -1,3 +1,3 @@
-import Lucide from "./Lucide";
+import Lucide from './Lucide'
 
-export default Lucide;
+export default Lucide
