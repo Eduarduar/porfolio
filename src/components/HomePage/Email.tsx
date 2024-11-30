@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Tippy from '@/components/Base/Tippy'
 import Lucide from '@/components/Base/Lucide'
 import Button from '@/components/Base/Button'
@@ -6,6 +7,14 @@ import { useDarkMode } from '@/hooks/useDarkMode'
 
 function Email() {
   const { isDarkMode } = useDarkMode()
+  const [copied, setCopied] = useState(false)
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(userInfo.email)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 1500)
+  }
+
   return (
     <>
       <section className="w-full py-5">
@@ -28,14 +37,22 @@ function Email() {
                 <Lucide icon="Send"></Lucide>
               </Button>
             </Tippy>
-            <Tippy content="Copy Email">
+            <Tippy content={copied ? 'Copied!' : 'Copy Email'}>
               <Button
                 elevated
-                variant={isDarkMode ? 'soft-primary' : 'primary'}
-                className="flex py-2.5 px-4 rounded-lg dark:text-slate-200"
-                onClick={() => navigator.clipboard.writeText(userInfo.email)}
+                variant={
+                  isDarkMode
+                    ? copied
+                      ? 'soft-success'
+                      : 'soft-primary'
+                    : copied
+                      ? 'success'
+                      : 'primary'
+                }
+                className={`flex py-2.5 px-4 rounded-lg dark:text-slate-200 transition-all ${copied ? 'animate-wave text-slate-200' : ''}`}
+                onClick={handleCopy}
               >
-                <Lucide icon="Copy"></Lucide>
+                <Lucide icon={copied ? 'Check' : 'Copy'}></Lucide>
               </Button>
             </Tippy>
           </div>

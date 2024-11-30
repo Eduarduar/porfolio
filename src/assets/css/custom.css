@@ -24,7 +24,7 @@ body::-webkit-scrollbar-thumb {
 
 .dark .scrollbar-custom::-webkit-scrollbar-thumb {
   /* slate-700 */
-  background: rgb(27, 37, 59); /* Color variable */
+  background: #111827; /* Color variable */
 }
 
 /* ?  ############## NProgress ############## ? */
@@ -73,9 +73,9 @@ html {
 }
 
 html.dark {
-  --scrollbar-bg: #3e3e3e;
-  --scrollbar-thumb: #1e1e1e;
-  --nprogress-bar-bg: #3e3e3e;
+  --scrollbar-bg: #111827;
+  --scrollbar-thumb: #232c3a;
+  --nprogress-bar-bg: #111827;
   --nprogress-spinner: #0076ff;
   --nprogress-shadow: #0076ff;
 }
