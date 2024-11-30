@@ -7,7 +7,18 @@ export default defineConfig({
   build: {
     commonjsOptions: {
       include: ['tailwind.config.js', 'node_modules/**']
-    }
+    },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Dividir React en un chunk separado
+          react: ['react', 'react-dom'],
+          // Dividir librerías grandes en chunks específicos
+          lodash: ['lodash']
+        }
+      }
+    },
+    chunkSizeWarningLimit: 1000 // Ajustar límite de advertencia a 1 MB
   },
   optimizeDeps: {
     include: ['tailwind-config']
