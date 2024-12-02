@@ -59,40 +59,12 @@ function Hero() {
         </span>
       </div>
       <div className="flex flex-col items-center sm:items-start gap-3">
-        <div className="text-center sm:text-left flex flex-col items-center sm:items-start relative">
-          <div
-            className="relative group"
-            onMouseEnter={() => setTooltip(true)}
-            onMouseLeave={() => setTooltip(false)}
-          >
-            <div className="text-2xl sm:text-4xl font-bold text-slate-600 w-full dark:text-slate-100 transform transition-all hover:scale-95 cursor-pointer ">
-              <>
-                {userInfo.firstName} {userInfo.lastName}
-              </>
-            </div>
-            <div
-              className={`badge-base LI-profile-badge absolute left-1/2 -translate-x-1/2 !max-w-[250px] overflow-hidden !max-h-[260px] text-sm rounded-md z-[1000] m-0 p-0 transition-opacity duration-200 ${!isDarkMode && tooltip ? 'opacity-100 block ' : 'opacity-0 -translate-y-[30rem]'}`}
-              data-locale="es_ES"
-              data-size="medium"
-              data-theme="light"
-              data-type="VERTICAL"
-              data-vanity="eduarduar"
-              data-version="v1"
-            ></div>
-            <div
-              className={`badge-base LI-profile-badge absolute left-1/2 -translate-x-1/2 !max-w-[250px] overflow-hidden !max-h-[260px] text-sm rounded-md z-[1000] m-0 p-0 transition-opacity duration-200 ${isDarkMode && tooltip ? 'opacity-100 block ' : 'opacity-0 -translate-y-[30rem]'}`}
-              data-locale="es_ES"
-              data-size="medium"
-              data-theme="dark"
-              data-type="VERTICAL"
-              data-vanity="eduarduar"
-              data-version="v1"
-            ></div>
-          </div>
-          {/* Descripción */}
-          <div className="text-slate-700 text-sm sm:text-lg dark:text-slate-300 max-w-xl w-fit min-h-[56px] flex flex-row text-center sm:text-start items-center justify-center pr-5">
-            <DynamicText phrases={userInfo.descHero} />
-          </div>
+        <div className="text-2xl sm:text-4xl font-bold text-slate-600 w-full dark:text-slate-100 transition-all">
+          {userInfo.firstName} {userInfo.lastName}
+        </div>
+        {/* Descripción */}
+        <div className="text-slate-700 text-sm sm:text-lg dark:text-slate-300 max-w-xl w-fit min-h-[56px] flex flex-row text-center sm:text-start items-center justify-center pr-5">
+          <DynamicText phrases={userInfo.descHero} />
         </div>
 
         <div className="flex gap-3 flex-col items-center sm:flex-row ">
@@ -139,14 +111,38 @@ function Hero() {
             </Menu.Items>
           </Menu>
           {userInfo.statusWork && (
-            <div className="flex gap-2 ms-2">
-              <div className="relative flex items-center justify-center">
-                <div className="w-4 h-4 rounded-full animate-ping absolute bg-green-500"></div>
-                <div className="w-2 h-2 rounded-full bg-green-500"></div>
+            <div
+              className="relative group"
+              onMouseEnter={() => setTooltip(true)}
+              onMouseLeave={() => setTooltip(false)}
+            >
+              <div className="flex gap-2 ms-2 transform transition-all hover:scale-95 cursor-pointer">
+                <div className="relative flex items-center justify-center">
+                  <div className="w-4 h-4 rounded-full animate-ping absolute bg-green-500"></div>
+                  <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                </div>
+                <span className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-none text-green-500 dark:text-green-400 cursor-pointer">
+                  Available <span className="hidden sm:block">to work</span>
+                </span>
+                <div
+                  className={`badge-base LI-profile-badge absolute left-1/2 -translate-x-1/2 !max-w-[250px] overflow-hidden !max-h-[260px] text-sm rounded-md z-[1000] m-0 p-0 transition-opacity duration-500 ${!isDarkMode && tooltip ? 'opacity-100 block translate-y-5' : 'opacity-0 -translate-y-[30rem]'}`}
+                  data-locale="es_ES"
+                  data-size="medium"
+                  data-theme="light"
+                  data-type="VERTICAL"
+                  data-vanity="eduarduar"
+                  data-version="v1"
+                ></div>
+                <div
+                  className={`badge-base LI-profile-badge absolute left-1/2 -translate-x-1/2 !max-w-[250px] overflow-hidden !max-h-[260px] text-sm rounded-md z-[1000] m-0 p-0 transition-opacity duration-500 ${isDarkMode && tooltip ? 'opacity-100 block translate-y-5' : 'opacity-0 -translate-y-[30rem]'}`}
+                  data-locale="es_ES"
+                  data-size="medium"
+                  data-theme="dark"
+                  data-type="VERTICAL"
+                  data-vanity="eduarduar"
+                  data-version="v1"
+                ></div>
               </div>
-              <span className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-none text-green-500 dark:text-green-400 cursor-default">
-                Available <span className="hidden sm:block">to work</span>
-              </span>
             </div>
           )}
         </div>
