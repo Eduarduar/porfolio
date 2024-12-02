@@ -58,12 +58,12 @@ function Hero() {
           />
         </span>
       </div>
-      <div className="flex flex-col items-center sm:items-start gap-3">
-        <div className="text-2xl sm:text-4xl font-bold text-slate-600 w-full dark:text-slate-100 transition-all">
+      <div className="flex flex-col items-center sm:items-start gap-3 w-full">
+        <div className="text-2xl sm:text-4xl font-bold text-slate-600 w-full dark:text-slate-100 transition-all text-center sm:text-start">
           {userInfo.firstName} {userInfo.lastName}
         </div>
         {/* Descripción */}
-        <div className="text-slate-700 text-sm sm:text-lg dark:text-slate-300 max-w-xl w-fit min-h-[56px] flex flex-row text-center sm:text-start items-center justify-center pr-5">
+        <div className="text-slate-700 text-sm sm:text-lg dark:text-slate-300 max-w-xl w-fit min-h-[56px] flex flex-row text-center sm:text-start items-center justify-center pr-5 ">
           <DynamicText phrases={userInfo.descHero} />
         </div>
 
