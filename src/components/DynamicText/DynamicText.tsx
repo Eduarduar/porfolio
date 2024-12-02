@@ -79,7 +79,7 @@ const DynamicText: React.FC<DynamicTextProps> = ({ phrases }) => {
     <div>
       {dynamicText}
       <span
-        className={`text-slate-600 dark:text-slate-100 ${puntero ? 'opacity-0' : 'opacity-100'}`}
+        className={`text-slate-600 dark:text-slate-100 transition-all duration-200 ${puntero ? 'opacity-0' : 'opacity-100'}`}
       >
         |
       </span>
