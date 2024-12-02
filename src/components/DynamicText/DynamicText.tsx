@@ -76,14 +76,15 @@ const DynamicText: React.FC<DynamicTextProps> = ({ phrases }) => {
   }, [puntero])
 
   return (
-    <>
-      <div className="relative">
-        {dynamicText}
-        <span className="text-slate-600 dark:text-slate-100 absolute -right-1">
-          {puntero ? ' ' : ' |'}
-        </span>
-      </div>
-    </>
+    <div>
+      {dynamicText}
+      <span
+        className={`text-slate-600 dark:text-slate-100 ${puntero ? 'opacity-0' : 'opacity-100'}`}
+      >
+        {' '}
+        |
+      </span>
+    </div>
   )
 }
 
