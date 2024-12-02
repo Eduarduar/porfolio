@@ -122,7 +122,7 @@ function Hero() {
                   <div className="w-2 h-2 rounded-full bg-green-500"></div>
                 </div>
                 <span className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-none text-green-500 dark:text-green-400 cursor-pointer">
-                  Available <span className="hidden sm:block">to work</span>
+                  Available <span className="hidden sm:block">&nbsp;to work</span>
                 </span>
                 <div
                   className={`badge-base LI-profile-badge absolute left-1/2 -translate-x-1/2 !max-w-[250px] overflow-hidden !max-h-[260px] text-sm rounded-md z-[1000] m-0 p-0 transition-opacity duration-500 ${!isDarkMode && tooltip ? 'opacity-100 block translate-y-5' : 'opacity-0 -translate-y-[30rem]'}`}
