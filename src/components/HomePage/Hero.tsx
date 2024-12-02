@@ -60,7 +60,6 @@ function Hero() {
       </div>
       <div className="flex flex-col items-center sm:items-start gap-3">
         <div className="text-center sm:text-left flex flex-col items-center sm:items-start relative">
-          {/* Contenedor del Nombre con Tooltip */}
           <div
             className="relative group"
             onMouseEnter={() => setTooltip(true)}
@@ -96,17 +95,8 @@ function Hero() {
           </div>
         </div>
 
-        <div className="flex gap-3">
-          {userInfo.statusWork && (
-            <span
-              aria-label="Looking for job"
-              className={`transition duration-200 border justify-center rounded-md font-medium text-xs py-1.5 px-2 bg-success border-success dark:bg-opacity-20 border-opacity-5 dark:border-success dark:border-opacity-20 shadow-md flex items-center gap-2 text-slate-200 cursor-default`}
-            >
-              Looking for job
-              <Lucide icon="Radar" />
-            </span>
-          )}
-          <Menu className="h-5">
+        <div className="flex gap-3 flex-col items-center sm:flex-row ">
+          <Menu>
             <Menu.Button>
               <Button
                 elevated
@@ -148,6 +138,17 @@ function Hero() {
               </Menu.Item>
             </Menu.Items>
           </Menu>
+          {userInfo.statusWork && (
+            <div className="flex gap-2 ms-2">
+              <div className="relative flex items-center justify-center">
+                <div className="w-4 h-4 rounded-full animate-ping absolute bg-green-500"></div>
+                <div className="w-2 h-2 rounded-full bg-green-500"></div>
+              </div>
+              <span className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-none text-green-500 dark:text-green-400 cursor-default">
+                Available <span className="hidden sm:block">to work</span>
+              </span>
+            </div>
+          )}
         </div>
         <div className="flex flex-row gap-2">
           {socialInfo.map((social) => (

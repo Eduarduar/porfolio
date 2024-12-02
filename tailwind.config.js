@@ -19,8 +19,6 @@ module.exports = {
     },
     extend: {
       animation: {
-        'toast-enter': 'toastEnter 0.5s ease-out forwards',
-        'toast-leave': 'toastLeave 0.5s ease-in forwards',
         'menu-icon-in': 'menuIconIn 0.3s ease-out forwards',
         'menu-icon-out': 'menuIconOut 0.3s ease-in forwards',
         'provider-out': 'providerOut 1s forwards',
@@ -37,14 +35,6 @@ module.exports = {
           '0%': { opacity: '1' },
           '99%': { opacity: '0' },
           '100%': { opacity: '0', display: 'none' }
-        },
-        toastEnter: {
-          '0%': { opacity: '0', transform: 'translateX(-20px)' },
-          '100%': { opacity: '1', transform: 'translateX(0)' }
-        },
-        toastLeave: {
-          '0%': { opacity: '1', transform: 'translateX(0)' },
-          '100%': { opacity: '0', transform: 'translateX(-20px)' }
         },
         menuIconIn: {
           '0%': { opacity: '0', transform: 'translateY(-20px)' },
