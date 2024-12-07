@@ -14,6 +14,9 @@ module.exports = {
   theme: {
     container: {
       screens: {
+        // propiedad mas pequeña que ms
+        '2sm': '545px',
+        '3sm': '365px',
         '2xl': '1320px'
       }
     },

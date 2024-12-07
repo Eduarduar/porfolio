@@ -40,7 +40,7 @@ function Projects() {
                         <img
                           src={project.image}
                           alt={`Project image for ${project.name}`}
-                          className="absolute top-0 left-0 bottom-0 right-0 box-border p-0 border-none m-auto block w-0 h-0 min-w-fit min-h-full max-w-full max-h-full rounded-lg duration-500 transition-all translate-x-9 translate-y-9 group-hover:translate-x-7 group-hover:translate-y-7"
+                          className="absolute top-0 left-0 bottom-0 right-0 box-border p-0 border-none m-auto block w-0 h-0 min-w-fit min-h-full max-w-full max-h-full rounded-lg duration-500 transition-all translate-x-7 translate-y-7 group-hover:translate-x-0 group-hover:translate-y-0"
                         />
                       )}
                     </span>
