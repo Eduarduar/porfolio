@@ -44,11 +44,7 @@ function Hero() {
   }, [])
 
   return (
-    <section
-      className=" relative flex flex-col sm:flex-row items-center gap-5"
-      data-aos="fade-left"
-      data-aos-delay="100"
-    >
+    <section className=" relative flex flex-col sm:flex-row items-center gap-5">
       <div className="relative min-w-44 min-h-44 bg-indigo-100 dark:bg-gray-700/60 border-8 border-white dark:border-gray-800/80 shadow-lg rounded-full overflow-hidden transition-all animate-neon-flicker">
         <span className="box-border block w-auto h-auto absolute inset-0">
           <img

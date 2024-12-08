@@ -4,11 +4,7 @@ import Button from '@/components/Base/Button'
 
 function NotFound() {
   return (
-    <section
-      className="w-full h-screen flex flex-col items-center justify-center"
-      data-aos="fade-up"
-      data-aos-delay="300"
-    >
+    <section className="w-full h-screen flex flex-col items-center justify-center">
       <header className="font-bold text-4xl text-[#a74bcc] dark:text-[#cf56ff] mb-6 flex flex-row items-center gap-3">
         <h2>Page Not Found</h2>
         <div className="py-2 px-2 flex items-center gap-4 outline-none border-none relative">

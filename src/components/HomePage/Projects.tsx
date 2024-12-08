@@ -3,18 +3,32 @@ import Lucide from '@/components/Base/Lucide'
 import Button from '@/components/Base/Button'
 import Tippy from '@/components/Base/Tippy'
 import { projectsInfo } from '@/stores/projectsInfo'
+import DynamicText from '@/components/DynamicText'
 
 function Projects() {
   return (
-    <section className="w-full" data-aos="fade-up" data-aos-delay="300">
-      <header className="font-bold text-2xl text-[#a74bcc] dark:text-[#cf56ff] mb-6 flex flex-row items-center gap-3">
-        <h2>My Projects</h2>
-        <div className="py-2 px-2 flex items-center gap-4 outline-none border-none relative">
-          <Tippy content="OwO">
-            <LoadingIcon icon="grid" className="w-8 h-8" />
-          </Tippy>
-          <span className="absolute dark:shadow-[0_0_40px_20px_rgba(181,77,225,0.5)] left-[18px] -z-100 transition-all"></span>
+    <section className="w-full" id="projects">
+      <header className="flex flex-col mb-6">
+        <div className="font-bold text-2xl text-[#a74bcc] dark:text-[#cf56ff] flex flex-row items-center gap-3">
+          <h2>My Projects</h2>
+          <div className="py-2 px-2 flex items-center gap-4 outline-none border-none relative">
+            <Tippy content="OwO">
+              <LoadingIcon icon="grid" className="w-8 h-8" />
+            </Tippy>
+            <span className="absolute dark:shadow-[0_0_40px_20px_rgba(181,77,225,0.5)] left-[18px] -z-100 transition-all"></span>
+          </div>
         </div>
+
+        <DynamicText
+          phrases={[
+            'Projects I have contributed to',
+            'My personal projects',
+            'Collaborative projects',
+            'Open source contributions',
+            'Side projects'
+          ]}
+          showOnlyFirstWord
+        />
       </header>
 
       <div className="flex flex-col gap-10">
@@ -83,7 +97,7 @@ function Projects() {
                         variant="soft-primary"
                         className="flex gap-3 sm:gap-0 hover:gap-3 group/buttonLive dark:text-slate-200 border-none font-bold"
                       >
-                        <span className="sm:w-0 sm:overflow-hidden sm:group-hover/buttonLive:w-[40px] transition-all">
+                        <span className="sm:w-0 sm:overflow-hidden sm:group-hover/buttonLive:w-[50px] transition-all">
                           Live
                         </span>
                         <Lucide icon="ExternalLink" className="w-6 h-6" />
