@@ -12,7 +12,7 @@ function Projects() {
         <div className="font-bold text-2xl text-[#a74bcc] dark:text-[#cf56ff] flex flex-row items-center gap-3">
           <h2>My Projects</h2>
           <div className="py-2 px-2 flex items-center gap-4 outline-none border-none relative">
-            <Tippy content="OwO">
+            <Tippy content="UwU">
               <LoadingIcon icon="grid" className="w-8 h-8" />
             </Tippy>
             <span className="absolute dark:shadow-[0_0_40px_20px_rgba(181,77,225,0.5)] left-[18px] -z-100 transition-all"></span>
@@ -27,7 +27,6 @@ function Projects() {
             'Open source contributions',
             'Side projects'
           ]}
-          showOnlyFirstWord
         />
       </header>
 
