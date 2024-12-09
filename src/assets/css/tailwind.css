@@ -4454,6 +4454,10 @@ input {
   position: static;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -4620,6 +4624,10 @@ input {
 
 .z-\[1000\] {
   z-index: 1000;
+}
+
+.z-\[-1\] {
+  z-index: -1;
 }
 
 .col-span-3 {
@@ -5974,6 +5982,10 @@ input {
   --tw-scale-x: .95;
   --tw-scale-y: .95;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
 }
 
 .hover\:gap-3:hover {

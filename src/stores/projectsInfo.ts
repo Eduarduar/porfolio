@@ -1,9 +1,9 @@
-interface Tech {
+export interface Tech {
   cdn: string
   name: string
 }
 
-interface ProjectInfo {
+export interface ProjectInfo {
   name: string
   desc: string
   repo?: string
