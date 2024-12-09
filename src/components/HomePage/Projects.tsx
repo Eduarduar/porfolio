@@ -3,6 +3,7 @@ import Tippy from '@/components/Base/Tippy'
 import DynamicText from '@/components/DynamicText'
 import { projectsInfo } from '@/stores/projectsInfo'
 import { PinedProjects, CardProjects } from '@/components/CardsProjects'
+import GithubActivity from '@/components/GithubActivity'
 
 function Projects() {
   const pineddProjects = projectsInfo.filter(
@@ -37,6 +38,7 @@ function Projects() {
 
       <div className="flex flex-col gap-10">
         <PinedProjects projects={pineddProjects} />
+
         <div className="flex flex-col">
           <div className="font-bold text-lg text-gray-500 dark:text-slate-400 flex flex-row items-center gap-3">
             <h2 className="relative select-text selection:bg-slate-500">
@@ -45,7 +47,20 @@ function Projects() {
             </h2>
           </div>
         </div>
+
         <CardProjects projects={UnpinedProjects} />
+
+        <div className="flex flex-col">
+          <div className="font-bold text-lg text-gray-500 dark:text-slate-400 flex flex-row items-center gap-3">
+            <h2 className="relative select-text selection:bg-slate-500">
+              GitHub Calendar
+              <span className="absolute dark:shadow-[0_0_40px_10px] dark:shadow-slate-500/50 left-0 bottom-[15px] w-full -z-100 transition-all"></span>
+            </h2>
+          </div>
+        </div>
+        <div className="!text-slate-800 dark:!text-slate-300/80 flex flex-row items-center justify-center">
+          <GithubActivity />
+        </div>
       </div>
     </section>
   )
