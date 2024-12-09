@@ -39,7 +39,7 @@ function Footer() {
           </div>
           <p className="text-muted-foreground flex flex-col sm:flex-row gap-2 dark:text-slate-300">
             This portfolio was built width
-            <div className="flex flex-row gap-2">
+            <span className="flex flex-row gap-2">
               {projectsInfo
                 .filter((project) => project.name == 'This portfolio')[0]
                 .techs?.map((tech) => (
@@ -47,7 +47,7 @@ function Footer() {
                     <img src={tech.cdn} alt={tech.name} />
                   </Tippy>
                 ))}
-            </div>
+            </span>
           </p>
           <a
             rel="noopener noreferrer"
@@ -62,13 +62,13 @@ function Footer() {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="2.5"
+              strokeWidth="2.5"
               stroke="currentColor"
               className="size-2 transition-transform group-hover:scale-125"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
               ></path>
             </svg>

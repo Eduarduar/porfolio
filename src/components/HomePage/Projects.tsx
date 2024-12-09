@@ -50,7 +50,7 @@ function Projects() {
 
         <CardProjects projects={UnpinedProjects} />
 
-        <div className="flex flex-col">
+        <div className="hidden md:flex md:flex-col">
           <div className="font-bold text-lg text-gray-500 dark:text-slate-400 flex flex-row items-center gap-3">
             <h2 className="relative select-text selection:bg-slate-500">
               GitHub Calendar
@@ -58,7 +58,7 @@ function Projects() {
             </h2>
           </div>
         </div>
-        <div className="!text-slate-800 dark:!text-slate-300/80 flex flex-row items-center justify-center">
+        <div className="!text-slate-800 dark:!text-slate-300/80 hidden md:flex md:flex-row items-center justify-center">
           <GithubActivity />
         </div>
       </div>
