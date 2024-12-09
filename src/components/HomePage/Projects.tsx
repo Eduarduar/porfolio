@@ -109,6 +109,16 @@ function Projects() {
         </div>
 
         {/* Proyectos No Pineados */}
+
+        <div className="flex flex-col">
+          <div className="font-bold text-lg text-gray-500 dark:text-slate-400 flex flex-row items-center gap-3">
+            <h2 className="relative select-text selection:bg-slate-500">
+              Other Projects
+              <span className="absolute dark:shadow-[0_0_40px_10px] dark:shadow-slate-500/50 left-0 bottom-[15px] w-full -z-100 transition-all"></span>
+            </h2>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-5">
           {projectsInfo
             .filter((project) => !project.pined)
