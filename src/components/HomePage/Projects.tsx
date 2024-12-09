@@ -5,8 +5,12 @@ import { projectsInfo } from '@/stores/projectsInfo'
 import { PinedProjects, CardProjects } from '@/components/CardsProjects'
 
 function Projects() {
-  const pineddProjects = projectsInfo.filter((project) => project.pined && project.image)
-  const UnpinedProjects = projectsInfo.filter((project) => !project.pined && project.repo)
+  const pineddProjects = projectsInfo.filter(
+    (project) => project.pined && project.image && project.name !== 'This portfolio'
+  )
+  const UnpinedProjects = projectsInfo.filter(
+    (project) => !project.pined && project.repo && project.name !== 'This portfolio'
+  )
 
   return (
     <section className="w-full" id="projects">

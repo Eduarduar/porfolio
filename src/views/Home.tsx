@@ -1,16 +1,15 @@
-import React from 'react'
 import Header from '@/components/HomePage/Header'
 import Main from '@/components/HomePage/Main'
 import FollowerMouse from '@/components/FollowerMouse'
-// import NotificationDevelop from '@/components/NotificationDevelop'
+import Footer from '@/components/HomePage/Footer'
 
-const Home: React.FC = () => {
+function Home() {
   return (
     <>
-      {/* <NotificationDevelop /> */}
       <FollowerMouse />
       <Header />
       <Main />
+      <Footer />
     </>
   )
 }
